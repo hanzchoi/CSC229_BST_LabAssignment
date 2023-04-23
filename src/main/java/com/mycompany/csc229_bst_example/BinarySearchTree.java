@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class BinarySearchTree {
-    private BstNode root;
+    public BstNode root;
 
     public boolean isEmpty() {
         return (this.root == null);
@@ -50,22 +50,30 @@ public class BinarySearchTree {
         return insertNode(tmpNode, data);
     }
 
+    // ToDo 1: complete InOrder Traversal
     public void inOrderTraversal() {
+        System.out.print("inOrder Traversal: ");
         doInOrder(this.root);
+        System.out.println();
     }
 
     private void doInOrder(BstNode root) {
-
-        // ToDo 1: complete InOrder Traversal 
+        if(root == null) return;
+        doInOrder((root.getLeft()));
+        System.out.print(root.getData() + " ");
+        doInOrder(root.getRight());
     }
+
+    // ToDo 2: complete the pre-order travesal .
     public void preOrderTraversal() {
         doPreOrder(this.root);
-        // ToDo 2: complete the pre-order travesal . 
+
     }
 
+    // ToDo 3: Find the height of a tree
     public Integer findHeight() {
 
-        // ToDo 3: Find the height of a tree
+
     }
 
 
