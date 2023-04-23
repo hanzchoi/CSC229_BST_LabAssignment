@@ -95,7 +95,36 @@ public class BinarySearchTree {
 
     //ToDo 4: complete getDepth of a node
     public int getDepth(BstNode node) {
+        return getDepth(this.root, node, 0);
+    }
 
+//    public int getDepth(BstNode node) {
+//        if (node == null) return -1;
+//        int depth = 0;
+//        BstNode current = this.root;
+//        while (current != null) {
+//            if (current.getData() == node.getData()) {
+//                return depth;
+//            } else if (current.getData() > node.getData()) {
+//                current = current.getLeft();
+//            } else {
+//                current = current.getRight();
+//            }
+//            depth++;
+//        }
+//        return -1;
+//    }
+
+    private int getDepth(BstNode root, BstNode node, int depth){
+        if(root == null) return -1;
+
+        if(root ==  node) return depth;
+
+        int leftDepth = getDepth(root.getLeft(), node, depth + 1);
+
+        if(leftDepth != -1) return leftDepth;
+
+        return getDepth(root.getRight(), node, depth + 1);
     }
     
    public void print() {
