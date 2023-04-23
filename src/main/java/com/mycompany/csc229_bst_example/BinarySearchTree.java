@@ -66,8 +66,17 @@ public class BinarySearchTree {
 
     // ToDo 2: complete the pre-order travesal .
     public void preOrderTraversal() {
+        System.out.print("PreOrder Traversal: ");
         doPreOrder(this.root);
+        System.out.println();
+    }
 
+    private void doPreOrder(BstNode root){
+        if (root == null) return;
+
+        System.out.print(root.getData() + " ");
+        doPreOrder(root.getLeft());
+        doPreOrder(root.getRight());
     }
 
     // ToDo 3: Find the height of a tree
