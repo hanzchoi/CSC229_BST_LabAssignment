@@ -21,10 +21,19 @@ public class DriverClass {
         bst.insert(1);
         bst.insert(4);
         bst.insert(13);
+
         System.out.println("\n-------------------");
-        System.out.println("In Order Traversal");
+
+        System.out.println("InOrder Traversal:");
         bst.inOrderTraversal();
-        
+
+        System.out.println("\nPreOrder Traversal:");
+        bst.preOrderTraversal();
+
+        System.out.println("\nHeight of the tree: " + bst.findHeight());
+
+        System.out.println("Depth of node with value 6: " + bst.getDepth(bst.root.getLeft().getRight()));
+
         bst.print();
     }
 }

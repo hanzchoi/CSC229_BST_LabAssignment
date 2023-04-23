@@ -68,10 +68,10 @@ public class BinarySearchTree {
         // ToDo 3: Find the height of a tree
     }
 
-    
 
+    //ToDo 4: complete getDepth of a node
     public int getDepth(BstNode node) {
-        //ToDo 4: complete getDepth of a node 
+
     }
     
    public void print() {
