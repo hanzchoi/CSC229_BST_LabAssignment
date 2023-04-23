@@ -81,10 +81,17 @@ public class BinarySearchTree {
 
     // ToDo 3: Find the height of a tree
     public Integer findHeight() {
-
-
+        return getHeight(this.root);
     }
 
+    private int getHeight(BstNode root){
+        if(root == null) return -1;
+
+        int leftHeight = getHeight(root.getLeft());
+        int rightHeight = getHeight(root.getRight());
+
+        return Math.max(leftHeight, rightHeight) + 1;
+    }
 
     //ToDo 4: complete getDepth of a node
     public int getDepth(BstNode node) {
