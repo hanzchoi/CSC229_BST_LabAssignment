@@ -9,7 +9,7 @@ package com.mycompany.csc229_bst_example;
  * @author MoaathAlrajab
  */
 public class DriverClass {
-    public static void main(String a[]) {
+    public static void main(String[] a) {
  
         BinarySearchTree bst = new BinarySearchTree();
         bst.insert(8);

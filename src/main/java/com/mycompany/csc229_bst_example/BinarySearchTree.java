@@ -58,7 +58,7 @@ public class BinarySearchTree {
 
         // ToDo 1: complete InOrder Traversal 
     }
-        public void preOrderTraversal() {
+    public void preOrderTraversal() {
         doPreOrder(this.root);
         // ToDo 2: complete the pre-order travesal . 
     }
@@ -77,8 +77,15 @@ public class BinarySearchTree {
    public void print() {
        System.out.println("\n==== BST Print ===== \n");
         print("", root, false);
-        // ToDo 5: complete the print of the BST
     }
 
+    // ToDo 5: complete the print of the BST
+    private void print(String prefix, BstNode node, boolean isLeft){
+        if(node == null) return;
+        print(prefix + (isLeft ? "|   " : "    "), node.getRight(), false);
+        System.out.print(prefix + (isLeft ? "\\--":"/--"));
+        System.out.println(node.getData());
+        print(prefix + (isLeft ? "|   " : "    "), node.getLeft(), true);
 
+    }
 }

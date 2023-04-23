@@ -12,7 +12,7 @@ public class BstNode {
 
     private BstNode left;
     private BstNode right;
-    private Integer data;
+    private final Integer data;
 
     public BstNode(Integer data) {
         this.data = data;
